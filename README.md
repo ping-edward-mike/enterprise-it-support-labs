@@ -31,15 +31,18 @@ This repository contains hands-on labs designed to build practical skills in Win
 Visual references to help understand the lab setup and architecture:
 
 **`Network Architecture`**
-- Shows the lab network layout, subnets, and connectivity between servers.  
+- Shows the lab network layout, subnets, and connectivity between servers. 
+ 
 ![Network-Architecture](diagrams/Network-Architecture.jpg)
 
 
 **`Logical Diagram`**
 - Depicts the Active Directory structure, domain membership, and server roles.
+
 ![Logical-Architecture](diagrams/logical-architecture.png)
 
 
 **`3 Servers for this labs`**
-- Illustrates each server in the lab and its assigned static IP address.  
+- Illustrates each server in the lab and its assigned static IP address. 
+
 ![Servers-and-ips](diagrams/servers-with-respective-ips.jpg)
