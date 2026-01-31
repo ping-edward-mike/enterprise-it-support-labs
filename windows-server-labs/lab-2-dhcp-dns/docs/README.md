@@ -44,7 +44,7 @@ DHCP uses a four-step process known as **DORA** to assign IP addresses:
 | **Name** (*mandatory*) | Identifies the DHCP scope for administrative reference. |
 | **IP Address Range** (*mandatory*) | Defines the pool of IP addresses available for clients. |
 | **Subnet Mask / Netmask** (*mandatory*) | Determines the network and host portions of an IP address. |
-| **Exclusion** | Reserves specific IP addresses so they are not assigned by DHCP. |
+| **Exclusion** | Reserves specific IP addresses (eg. win2k22-dc-01/win2k22-srvr-01/win2k22-core-01/default-gateway, printer, and other server addresses) so they are not assigned by DHCP. |
 | **Delay** | Controls response priority when multiple DHCP servers exist. |
 | **Lease Duration** | Specifies how long an IP address is leased to a client. |
 | **Options** | Provides additional settings such as gateway, DNS, and domain name. |
@@ -166,7 +166,7 @@ This ensures client machines can resolve domain resources correctly.
 
 ---
 
-## Verify Leased Address
+### Verify Leased Address
 
 ![Leased Address verification](/windows-server-labs/lab-2-dhcp-dns/screenshots/leased-addresses-to-win11-01.PNG)
 
