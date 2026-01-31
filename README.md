@@ -44,3 +44,6 @@ Visual references to help understand the lab setup and architecture:
 - Depicts the Active Directory structure, domain membership, and server roles.
 
 ![Logical-Architecture](diagrams/logical-architecture.png)
+
+
+Note: Lab diagrams were designed using *Lucidchart*, and server, router, internet, and PC (desktop) images were generated with *ChatGPT* for clarity.
