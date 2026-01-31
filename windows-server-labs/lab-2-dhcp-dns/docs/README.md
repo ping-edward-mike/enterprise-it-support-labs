@@ -34,7 +34,7 @@ DHCP uses a four-step process known as **DORA** to assign IP addresses:
 - **`Request`** – The client requests the offered IP address.
 - **`Acknowledge`** – The server confirms the lease and provides configuration details.
 
-| Property | Purpose |
+| Windows Server DHCP Attribute | Purpose |
 |------|------|
 | **Name** (*mandatory*) | Identifies the DHCP scope for administrative reference. |
 | **IP Address Range** (*mandatory*) | Defines the pool of IP addresses available for clients. |
