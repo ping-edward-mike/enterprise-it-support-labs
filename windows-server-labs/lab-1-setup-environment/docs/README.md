@@ -1,11 +1,11 @@
 # Windows Server Lab 1  
-## Domain Foundation (Active Directory)
+## Domain Foundation & Active Directory Deployment
 
 ---
 
 ## Lab Overview
 
-This lab established the **foundational identity infrastructure** for a small enterprise Windows environment.  
+This lab established the **Domain Foundation & Active Directory Deployment** for a small enterprise Windows environment.  
 It focused on deploying Windows Server 2022, configuring Active Directory Domain Services (AD DS), and preparing the environment for centralized authentication and management.
 
 This lab served as the **base for all subsequent Windows Server and MD-102 labs**.
