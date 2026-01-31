@@ -105,7 +105,7 @@ VM names match OS hostnames to simplify administration and troubleshooting.
 #### System Configuration
 - Rename the server to: 
 
-Win2k22-DC-01
+**`Win2k22-DC-01`**
 
 - Add a system description identifying it as the **Primary Domain Controller**
 
