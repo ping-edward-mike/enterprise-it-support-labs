@@ -160,9 +160,15 @@ This ensures client machines can resolve domain resources correctly.
 
 ---
 
+## Verify Leased Address
+
+![Leased Address verification](/windows-server-labs/lab-2-dhcp-dns/screenshots/leased-addresses-to-win11-01.PNG)
+
+---
+
 ## Validation & Testing
 
-- Client successfully receives an IP address from DHCP
+- Client successfully receives an IP address from DHCP (Win2k22-DC-01)
 - Client resolves domain names via DNS
 - Domain login works on `Win11-01`
 - DHCP lease is visible in the DHCP console
