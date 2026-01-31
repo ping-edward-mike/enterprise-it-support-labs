@@ -184,16 +184,7 @@ Win2k22-Core-01
 - One Domain Controller
 - Two domain-joined member servers
 - Static IP addressing applied consistently for all three servers
-- Enterprise-ready baseline infrastructure
 
 ---
 
-## 🔜 Next Lab
-
 ### ➡️ Lab 2: DNS & DHCP Services
-
-Planned enhancements:
-- DHCP scope creation and lease management
-- DNS zone design and management
-- Migration from External to Internal virtual switch
-- Centralized IP address management
