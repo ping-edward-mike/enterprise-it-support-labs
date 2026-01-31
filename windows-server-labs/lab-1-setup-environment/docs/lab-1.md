@@ -110,6 +110,7 @@ Three VMs were created with the following names:
 ![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
 
 - Network configuration was verified using `ipconfig /all`.
+
 ![Win2k22-DC-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-ipconfig-all-to-verify-network-configurations.PNG)
 
 ---
@@ -144,6 +145,7 @@ On `Win2k22-DC-01`:
 ![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
 
 - Network configuration was verified using `ipconfig /all`.
+
 ![Win2k22-SRVR-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-01-ipconfig-all-to-verify-network-configurations.PNG)
 
 ---
