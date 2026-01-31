@@ -1,75 +1,160 @@
-# 🧪 Windows Server Lab 1
-## Domain Foundation (Active Directory & DNS)
+# 🧪 Windows Server Lab 1  
+## Domain Foundation (Active Directory)
 
-### 📌 Lab Overview
-This lab demonstrates the setup of a foundational Windows Server 2022 domain environment using **Active Directory Domain Services (AD DS)** and **DNS**.  
-The environment simulates a small enterprise on-premises network and serves as the foundation for all subsequent Windows Server and MD-102 labs.
+---
 
-### 🎯 Objectives
-- Deploy Windows Server 2022 virtual machines  
-- Configure static IP addressing and DNS  
-- Promote a server to Domain Controller  
-- Join member servers and a Windows 11 client to the domain  
-- Validate domain authentication and name resolution  
+## 📌 Lab Overview
 
-### 🧱 Lab Architecture
+This lab establishes the **foundational identity infrastructure** for a small enterprise Windows environment.
+It focuses on deploying Windows Server 2022, configuring Active Directory Domain Services (AD DS), and preparing the environment for centralized authentication and management.
 
-#### Logical Architecture
-![Logical Architecture](diagrams/logical-architecture.png)  
-*Replace the above with your lab’s logical architecture diagram.*
+This lab serves as the **base for all subsequent Windows Server and MD-102 labs**.
 
-#### Network Architecture
-![Network Architecture](diagrams/network-architecture.png)  
-*Replace the above with your lab’s network diagram.*
+> ⚠️ DHCP and advanced DNS configuration are intentionally excluded from this lab and will be implemented in **Lab 2**.
 
-### 🖥️ Lab Environment
-**Virtualisation Platform:** Hyper-V  
+---
 
-**Operating Systems:**  
-- Windows Server 2022 (GUI)  
-- Windows Server 2022 Core  
-- Windows 11  
+## 🎯 Lab Objectives
 
-### 🧩 Machines & Roles
+- Deploy Windows Server 2022 virtual machines
+- Design and apply a static IP addressing scheme
+- Install and configure Active Directory Domain Services
+- Create a new Active Directory forest and domain
+- Join member servers to the domain
+- Establish a stable enterprise-ready foundation
 
-| Hostname        | Role                                   |
-|-----------------|---------------------------------------|
-| Win2k22-DC-01   | Domain Controller (AD DS, DNS)        |
-| Win2k22-SRVR-01 | Member Server                          |
-| Win2k22-Core    | Server Core (Domain Member)            |
-| Win11-01        | Domain-joined Client                   |
+---
 
-### 🌐 Network Configuration
+## 🏗️ Lab Architecture
 
-| Machine         | IP Address       | DNS Server        |
-|-----------------|-----------------|-----------------|
-| Win2k22-DC-01   | 192.168.10.10   | 127.0.0.1       |
-| Win2k22-SRVR-01 | 192.168.10.20   | 192.168.10.10   |
-| Win2k22-Core    | 192.168.10.30   | 192.168.10.10   |
-| Win11-01        | DHCP / Static   | 192.168.10.10   |
+The lab consists of three Windows Server virtual machines:
 
-**Subnet:** 255.255.255.0  
-**Domain name:** `ine.local`
+| VM Name | Role | Operating System |
+|------|----|----|
+| `Win2k22-DC-01` | Domain Controller | Windows Server 2022 Datacenter (Desktop Experience) |
+| `Win2k22-SRVR-01` | Member Server | Windows Server 2022 Datacenter |
+| `Win2k22-Core-01` | Server Core (Member) | Windows Server 2022 Datacenter (Core) |
 
-### ⚙️ Implementation Steps
+---
 
-1. **Virtual Machine Creation**
-   - Created four virtual machines using Hyper-V  
-   - Installed operating systems according to assigned roles  
+## 🌐 Network Design
 
-2. **Network & Host Configuration**
-   - Assigned static IP addresses to all servers  
-   - Configured DNS on all machines to point to `Win2k22-DC-01`  
-   - Renamed machines using enterprise naming standards  
+### Network Addressing
 
-3. **Active Directory Deployment**
-   - Installed **Active Directory Domain Services** on `Win2k22-DC-01`  
-   - Promoted the server to **Domain Controller**  
-   - Created a new forest and domain: `ine.local`  
-   - Installed DNS during domain promotion  
+| Setting | Value |
+|------|------|
+| Network Address | `192.168.10.0/24` |
+| Subnet Mask | `255.255.255.0` |
+| Usable IP Range | `192.168.10.1 – 192.168.10.254` |
+| Default Gateway | `192.168.10.254` |
 
-4. **Domain Join Operations**
-   - Joined `Win2k22-SRVR-01` to `ine.local`  
-   - Configured `Win2k22-Core` using `sconfig` and joined it to the domain  
-   - Joined `Win11-01` to the domain  
-   - Verified computer objects appeared in Active Directory  
+---
+
+### Server IP Allocation
+
+| Server | Role | IP Address |
+|------|----|----|
+| `Win2k22-DC-01` | Domain Controller | `192.168.10.10` |
+| `Win2k22-SRVR-01` | Member Server | `192.168.10.20` |
+| `Win2k22-Core-01` | Server Core | `192.168.10.30` |
+
+> IP addresses are deliberately spaced to allow for future expansion (additional servers, services, and appliances).
+
+---
+
+## 🔌 Virtual Switch Configuration
+
+- All virtual machines are initially connected to the **Default External Switch**
+- This provides:
+  - Internet connectivity
+  - Windows Update access
+- The environment will transition to an **Internal virtual switch** in **Lab 2** when DHCP is introduced
+
+---
+
+## 🖥️ Virtual Machine Configuration
+
+### 1️⃣ Create Virtual Machines
+
+Create three VMs using the following names:
+
+- `Win2k22-DC-01`
+- `Win2k22-SRVR-01`
+- `Win2k22-Core-01`
+
+VM names match OS hostnames to simplify administration and troubleshooting.
+
+---
+
+### 2️⃣ Configure `Win2k22-DC-01`
+
+#### Operating System
+- Install **Windows Server 2022 Datacenter Evaluation**
+- Select **Desktop Experience**
+
+#### Network Configuration
+- Configure a **static IPv4 address**
+- Set:
+  - IP Address: `192.168.10.10`
+  - Subnet Mask: `255.255.255.0`
+  - Default Gateway: `192.168.10.254`
+
+#### System Configuration
+- Rename the server to: 
+
+Win2k22-DC-01
+
+- Add a system description identifying it as the **Primary Domain Controller**
+
+---
+
+## 🏢 Active Directory Configuration
+
+### 3️⃣ Install Active Directory Domain Services (AD DS)
+
+On `Win2k22-DC-01`:
+
+- Install the **Active Directory Domain Services** role
+- Promote the server to a Domain Controller
+- Create a **new forest**
+- Configured the domain name as: ine.local
+
+- Join the following servers to the domain `ine.local`:
+- `Win2k22-SRVR-01`
+- `Win2k22-Core-01`
+
+This validates:
+- Network connectivity
+- DNS resolution
+- Active Directory authentication
+
+---
+
+## ✅ Validation Checks
+
+- Domain `ine.local` is reachable
+- All servers can authenticate against the Domain Controller
+- Member servers appear in **Active Directory Users and Computers**
+- DNS resolution functions correctly within the domain
+
+---
+
+## 📦 Lab 1 Deliverables
+
+- One Active Directory forest and domain (`ine.local`)
+- One Domain Controller
+- Two domain-joined member servers
+- Static IP addressing applied consistently for all three servers
+- Enterprise-ready baseline infrastructure
+
+---
+
+## 🔜 Next Lab
+
+### ➡️ Lab 2: DNS & DHCP Services
+
+Planned enhancements:
+- DHCP scope creation and lease management
+- DNS zone design and management
+- Migration from External to Internal virtual switch
+- Centralized IP address management
