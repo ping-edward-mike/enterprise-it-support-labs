@@ -6,7 +6,7 @@ This repository contains hands-on labs designed to build practical skills in Win
 
 ## Lab Roadmap
 
-- **[Lab 1: Deploy a foundational Active Directory domain and join member servers](/windows-server-labs/lab-1-setup-environment/docs/lab-1.md) **
+- [**Lab 1: Deploy a foundational Active Directory domain and join member servers**](/windows-server-labs/lab-1-setup-environment/docs/lab-1.md)
 - **Lab 2:** Configure DHCP and DNS services for the domain  
 - **Lab 3:** Create Organizational Units (OUs) and manage user/group accounts  
 - **Lab 4:** Implement Group Policy Objects (GPOs) for desktop and security settings  
