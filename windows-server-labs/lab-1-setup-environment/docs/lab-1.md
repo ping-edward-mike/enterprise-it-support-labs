@@ -47,7 +47,7 @@ The lab consists of three Windows Server virtual machines:
 | Subnet Mask | `255.255.255.0` |
 | Usable IP Range | `192.168.10.1 – 192.168.10.254` |
 | Default Gateway | `192.168.10.254` |
-
+| Total Useable IP address | `254 (*before assigning any*)` |
 ---
 
 ### Server IP Allocation
@@ -96,11 +96,11 @@ VM names match OS hostnames to simplify administration and troubleshooting.
 
 #### Network Configuration
 - Configure a **static IPv4 address** 
-- Set:
-  - IP Address: `192.168.10.10`
-  - Subnet Mask: `255.255.255.0`
-  - Default Gateway: `192.168.10.254`
-  - Preferred DNS: `192.168.10.10`
+- Set :
+  - IP Address : `192.168.10.10`
+  - Subnet Mask : `255.255.255.0`
+  - Default Gateway : `192.168.10.254`
+  - Preferred DNS : `192.168.10.10`
 
 #### System Configuration
 - Rename the server to: 
@@ -109,7 +109,7 @@ VM names match OS hostnames to simplify administration and troubleshooting.
 
 - Add a system description identifying it as the **Primary Domain Controller**
 
-- Win2k22-DC-01 renamed and configured with a static IP address.
+*Win2k22-DC-01 renamed and configured with a static IP address.*
 
 ![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
 
@@ -133,21 +133,21 @@ On `Win2k22-DC-01`:
 
 ### 4. Configure `Win2k22-SRVR-01`
 
-- Rename the server to: 
+- Rename the server to : 
 
-Win2k22-SRVR-01
+**`Win2k22-SRVR-01`**
 
 - Add a system description identifying it as the **Member Server**
 
 #### Network Configuration
 - Configure a **static IPv4 address** 
-- Set:
-  - IP Address: `192.168.10.20`
-  - Subnet Mask: `255.255.255.0`
-  - Default Gateway: `192.168.10.254`
-  - Preferred DNS: `192.168.10.10`
+- Set :
+  - IP Address : `192.168.10.20`
+  - Subnet Mask : `255.255.255.0`
+  - Default Gateway : `192.168.10.254`
+  - Preferred DNS : `192.168.10.10`
 
-- Win2k22-SRVR-01 renamed and configured with a static IP address
+*Win2k22-SRVR-01 renamed and configured with a static IP address*
 
 ![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
 
@@ -158,19 +158,19 @@ Win2k22-SRVR-01
 
 ### 5. Configure `Win2k22-Core-01`
 
-- Rename the server to: 
+- Rename the server to : 
 
-Win2k22-Core-01
+**`Win2k22-Core-01`**
 
 #### Network Configuration
 - Configure a **static IPv4 address** 
-- Set:
-  - IP Address: `192.168.10.30`
-  - Subnet Mask: `255.255.255.0`
-  - Default Gateway: `192.168.10.254`
-  - Preferred DNS: `192.168.10.10`
+- Set :
+  - IP Address : `192.168.10.30`
+  - Subnet Mask : `255.255.255.0`
+  - Default Gateway : `192.168.10.254`
+  - Preferred DNS : `192.168.10.10`
 
-- Win2k22-Core-01 renamed and configured with a static IP address
+*Win2k22-Core-01 renamed and configured with a static IP address*
 
 ![Win2k22-Core-01-static-ip-config-renamed-1](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-1.jpg)
 
@@ -181,11 +181,11 @@ Win2k22-Core-01
 
 ## Domain Membership
 
-The following servers to the domain `ine.local`:
+The following servers were joined to the `ine.local` domain:
 - `Win2k22-SRVR-01`
 - `Win2k22-Core-01`
 
-This validates:
+This validates :
 - Network connectivity
 - DNS resolution
 - Active Directory authentication
@@ -201,4 +201,4 @@ This validates:
 
 ---
 
-### Lab 2: DNS & DHCP Services
+### Next - Lab 2 : (DNS & DHCP Services)
