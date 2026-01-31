@@ -203,4 +203,4 @@ The following checks were performed to validate the environment:
 
 ---
 
-### Next Lab: Lab 2 (DNS & DHCP Services)
+### Next Lab: [**Lab 2 (Configure DHCP and DNS services for the domain)**](/windows-server-labs/lab-2-dhcp-dns/docs/README.md)  
