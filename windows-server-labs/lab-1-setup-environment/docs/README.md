@@ -194,7 +194,7 @@ The following checks were performed to validate the environment:
 
 ---
 
-## Lab 1 Deliverables
+## Deliverables
 
 - One Active Directory forest and domain (`ine.local`)
 - One Domain Controller
