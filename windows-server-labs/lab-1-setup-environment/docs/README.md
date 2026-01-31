@@ -203,4 +203,11 @@ The following checks were performed to validate the environment:
 
 ---
 
+## References
+
+- Microsoft Documentation: Install Active Directory Domain Services  
+  https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-
+
+---
+
 ### Next Lab: [**Lab 2 (Configure DHCP and DNS services for the domain)**](/windows-server-labs/lab-2-dhcp-dns/docs/README.md)  
