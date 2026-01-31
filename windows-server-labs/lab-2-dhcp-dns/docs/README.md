@@ -27,6 +27,13 @@ By completing this lab, you will be able to:
 
 DHCP automatically assigns IP configuration to client devices, reducing manual setup and ensuring consistent network settings across the domain.
 
+### DHCP DORA Process
+DHCP uses a four-step process known as **DORA** to assign IP addresses:
+- **`Discover`** – The client broadcasts a request to locate a DHCP server.
+- **`Offer`** – The DHCP server responds with an available IP address.
+- **`Request`** – The client requests the offered IP address.
+- **`Acknowledge`** – The server confirms the lease and provides configuration details.
+
 | Property | Purpose |
 |------|------|
 | **Name** (*mandatory*) | Identifies the DHCP scope for administrative reference. |
