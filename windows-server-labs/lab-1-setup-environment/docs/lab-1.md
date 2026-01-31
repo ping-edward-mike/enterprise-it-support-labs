@@ -105,7 +105,7 @@ Three VMs were created with the following names:
 - Renamed the server to: **`Win2k22-DC-01`**
 - Added a system description identifying it as the **Primary Domain Controller**
 
-*The server was renamed and configured with a static IP address.*
+*Win2k22-DC-01 was renamed and configured with it's static IP address.*
 
 ![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
 
@@ -139,7 +139,7 @@ On `Win2k22-DC-01`:
   - Default Gateway: `192.168.10.254`
   - Preferred DNS: `192.168.10.10`
 
-*The server was renamed and configured with a static IP address.*
+*Win2k22-SRVR-01 was renamed and configured with it's static IP address.*
 
 ![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
 
@@ -159,7 +159,7 @@ On `Win2k22-DC-01`:
   - Default Gateway: `192.168.10.254`
   - Preferred DNS: `192.168.10.10`
 
-*The server was renamed and configured with a static IP address.*
+*Win2k22-Core-01 was renamed and configured with it's static IP address.*
 
 ![Win2k22-Core-01-static-ip-config-renamed-1](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-1.jpg)
 
