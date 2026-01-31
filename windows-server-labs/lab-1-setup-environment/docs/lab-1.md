@@ -94,11 +94,12 @@ VM names match OS hostnames to simplify administration and troubleshooting.
 - Select **Desktop Experience**
 
 #### Network Configuration
-- Configure a **static IPv4 address**
+- Configure a **static IPv4 address** 
 - Set:
   - IP Address: `192.168.10.10`
   - Subnet Mask: `255.255.255.0`
   - Default Gateway: `192.168.10.254`
+  - Preferred DNS: `192.168.10.10`
 
 #### System Configuration
 - Rename the server to: 
@@ -107,10 +108,10 @@ Win2k22-DC-01
 
 - Add a system description identifying it as the **Primary Domain Controller**
 
-- After System Configuration
+- Win2k22-DC-01 renamed and configured with a static IP address.
 ![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
 
-- After static Ip Configuration
+- Network configuration verified using ipconfig /all.
 ![Win2k22-DC-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-ipconfig-all-to-verify-network-configurations.PNG)
 
 ---
@@ -126,15 +127,6 @@ On `Win2k22-DC-01`:
 - Create a **new forest**
 - Configured the domain name as: ine.local
 
-- Join the following servers to the domain `ine.local`:
-- `Win2k22-SRVR-01`
-- `Win2k22-Core-01`
-
-This validates:
-- Network connectivity
-- DNS resolution
-- Active Directory authentication
-
 ---
 
 ### 4️⃣ Configure `Win2k22-SRVR-01`
@@ -145,10 +137,18 @@ Win2k22-SRVR-01
 
 - Add a system description identifying it as the **Member Server**
 
-- After System Configuration
+#### Network Configuration
+- Configure a **static IPv4 address** 
+- Set:
+  - IP Address: `192.168.10.20`
+  - Subnet Mask: `255.255.255.0`
+  - Default Gateway: `192.168.10.254`
+  - Preferred DNS: `192.168.10.10`
+
+- Win2k22-SRVR-01 renamed and configured with a static IP address
 ![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
 
-- After static Ip Configuration
+- Network configuration verified using ipconfig /all.
 ![Win2k22-SRVR-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-01-ipconfig-all-to-verify-network-configurations.PNG)
 
 ---
@@ -159,7 +159,15 @@ Win2k22-SRVR-01
 
 Win2k22-Core-01
 
-- After System Configuration
+#### Network Configuration
+- Configure a **static IPv4 address** 
+- Set:
+  - IP Address: `192.168.10.30`
+  - Subnet Mask: `255.255.255.0`
+  - Default Gateway: `192.168.10.254`
+  - Preferred DNS: `192.168.10.10`
+
+- Win2k22-Core-01 renamed and configured with a static IP address
 ![Win2k22-Core-01-static-ip-config-renamed-1](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-1.jpg)
 
 ![Win2k22-Core-01-static-ip-config-renamed-2](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-2.jpg)
@@ -167,14 +175,16 @@ Win2k22-Core-01
 
 ---
 
+## Domain Membership
 
+The following servers to the domain `ine.local`:
+- `Win2k22-SRVR-01`
+- `Win2k22-Core-01`
 
-## ✅ Validation Checks
-
-- Domain `ine.local` is reachable
-- All servers can authenticate against the Domain Controller
-- Member servers appear in **Active Directory Users and Computers**
-- DNS resolution functions correctly within the domain
+This validates:
+- Network connectivity
+- DNS resolution
+- Active Directory authentication
 
 ---
 
