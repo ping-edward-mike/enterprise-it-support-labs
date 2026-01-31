@@ -83,6 +83,7 @@ Create three VMs using the following names:
 - `Win2k22-Core-01`
 
 VM names match OS hostnames to simplify administration and troubleshooting.
+![Hyper-V-Manager-with-3-VMs-running](/windows-server-labs/lab-1-setup-environment/screenshots/Hyper-V-Manager-with-3-VMs-running.jpg)
 
 ---
 
@@ -105,6 +106,12 @@ VM names match OS hostnames to simplify administration and troubleshooting.
 Win2k22-DC-01
 
 - Add a system description identifying it as the **Primary Domain Controller**
+
+- After System Configuration
+![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
+
+- After static Ip Configuration
+![Win2k22-DC-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-ipconfig-all-to-verify-network-configurations.PNG)
 
 ---
 
@@ -129,6 +136,38 @@ This validates:
 - Active Directory authentication
 
 ---
+
+### 4️⃣ Configure `Win2k22-SRVR-01`
+
+- Rename the server to: 
+
+Win2k22-SRVR-01
+
+- Add a system description identifying it as the **Member Server**
+
+- After System Configuration
+![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
+
+- After static Ip Configuration
+![Win2k22-SRVR-01-ipconfig-verify-neytwork-config](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-01-ipconfig-all-to-verify-network-configurations.PNG)
+
+---
+
+### 5️⃣ Configure `Win2k22-Core-01`
+
+- Rename the server to: 
+
+Win2k22-Core-01
+
+- After System Configuration
+![Win2k22-Core-01-static-ip-config-renamed-1](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-1.jpg)
+
+![Win2k22-Core-01-static-ip-config-renamed-2](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-2.jpg)
+
+
+---
+
+
 
 ## ✅ Validation Checks
 
