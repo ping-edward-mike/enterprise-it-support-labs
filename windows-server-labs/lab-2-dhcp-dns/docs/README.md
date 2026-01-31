@@ -1,5 +1,5 @@
 # Windows Server Lab 2
-## Configure DHCP and DNS on the Domain Controller
+## Configure DHCP and DNS on Win2k22-DC-01
 
 ---
 
@@ -13,12 +13,11 @@ By the end of this lab, domain clients will:
 ---
 
 ## 🎯 Objectives
-By completing this lab, you will be able to:  
-1. Install and configure the DHCP role on the Domain Controller.  
+1. Install and configure the DHCP role on the Domain Controller (Win2k22-DC-01).  
 2. Create and activate a DHCP scope.  
 3. Verify that DNS supports Active Directory domain name resolution. 
-4. Create a new VM Win11-01 for Client
-5. install a Windows 11 OS for Win11-01 and join Client to domain `ine.local`
+4. Create a new VM Win11-01 for client
+5. install a Windows 11 OS for Win11-01 and join client to domain `ine.local`
 6. Test client connectivity and DHCP/DNS functionality.  
 
 ---
@@ -45,10 +44,124 @@ DHCP uses a four-step process known as **DORA** to assign IP addresses:
 | **Options** | Provides additional settings such as gateway, DNS, and domain name. |
 | **Activation** | Enables the scope to begin assigning IP addresses. |
 
-## Implementations and Configurations
+## DHCP Implementations and Configurations
+
+## Network Configuration
+
+### Virtual Switch Setup
+
+- **Virtual Switch Name:** `private switch lab`
+- **Switch Type:** Private
+- **Purpose:**
+  - Isolated internal network
+  - Communication only between virtual machines
+  - No external internet access
+
+### Install DHCP Role
+
+On the Domain Controller:
+
+1. Open **Server Manager**
+2. Go to **Add Roles and Features**
+3. Select **DHCP Server**
+4. Complete the installation
+5. Run the **Post-Deployment Configuration**
+   - Authorise the DHCP server in Active Directory
+
+- [**DHCP role installed on Win2k22-DC-01**](/windows-server-labs/lab-2-dhcp-dns/screenshots/installed-dhcp-on-win2k22-dc-01.PNG)
+
+---
+
+### Configure DHCP Scope
+
+1. Open **Tools > DHCP**
+2. Expand the server node
+3. Right-click **IPv4** → **New Scope**
+4. Configure the scope with appropriate values:
+   - IP address range
+   - Subnet mask
+   - Default gateway (if applicable)
+   - DNS server (Domain Controller IP)
+5. Activate the scope
+
+- [**DHCP scope**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-scope.PNG)
+- [**DHCP scope range**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-ip-ranges.PNG)
+- [**DHCP exclusion addresses**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-exclusion-ips.PNG)
+- [**DHCP configured done**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-done.PNG)
+
+---
+
+## DNS Configuration
+
+### DNS Role Overview
+
+DNS was installed during **Lab 1** as part of Active Directory Domain Services.
+
+### Verify DNS Configuration
+
+1. Open **Tools > DNS**
+2. Expand the server node
+3. Confirm the following exist:
+   - Forward Lookup Zone: `ine.local`
+   - Required records (A, NS, SOA)
+4. Ensure DNS is listening on the Domain Controller’s static IP
+
+---
+
+### DNS Integration with DHCP
+
+- DHCP is configured to:
+  - Automatically register client records in DNS
+  - Used the Domain Controller as the primary DNS server
+
+This ensured client machines can resolve domain resources correctly.
+
+---
+
+## Client Machine Deployment
+
+### Create Windows 11 VM
+
+- **VM Name:** `Win11-01`
+- **Operating System:** Windows 11
+- **Network Adapter:** `private switch lab`
+
+- [**Win11-01 VM**](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-VM-created.jpg)
+
+---
+
+### Install Windows 11 and Join Domain
+
+1. Complete standard Windows 11 installation
+2. Rename the computer to `Win11-01`
+3. Join the domain:
+   - Domain name: `ine.local`
+4. Restart the machine when prompted
+5. Log in using a **domain account** which was created in Active Directory
+6. Set network configuration to **DHCP**
+7. Verify the machine receives:
+  - IP address
+  - DNS server
+  - Default gateway (if configured)
+
+- [**Win11-01 VM**](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-dhcp-working.PNG)
+
+---
+
+## Validation & Testing
+
+- Client successfully receives an IP address from DHCP
+- Client resolves domain names via DNS
+- Domain login works on `Win11-01`
+- DHCP lease is visible in the DHCP console
+- DNS records are created automatically for the client
 
 ---
 
 ## References
 - [Microsoft Documentations : Install and Configure DHCP](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top)  
 - [Microsoft Documentations : Configure DNS for Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/dns/active-directory-integrated-dns-overview)  
+
+---
+
+### Next Lab: Lab 3 (Basics : Active Directory, GPO, OUI including user creation, password resets)
