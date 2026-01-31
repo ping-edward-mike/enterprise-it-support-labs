@@ -11,8 +11,8 @@ This repository contains hands-on labs designed to build practical skills in Win
 - **Lab 3:** Create Organizational Units (OUs) and manage user/group accounts  
 - **Lab 4:** Implement Group Policy Objects (GPOs) for desktop and security settings  
 - **Lab 5:** Set up file and print services with permissions and shares  
-- **Lab 6:** Configure backup and restore strategies for the domain environment  
-- **Lab 7:** Troubleshoot common Windows Server network and AD issues  
+- **Lab 6:** Troubleshoot common Windows Server network and AD issues  
+- **Lab 7:** Configure backup and restore strategies for the domain environment  
 - **Lab 8:** Entra ID integration and user/device management basics  
 - **Lab 9:** Configure Intune for endpoint management and policy enforcement  
 - **Lab 10:** Device enrollment, compliance, and reporting in Intune  
@@ -22,7 +22,7 @@ This repository contains hands-on labs designed to build practical skills in Win
 ## Goals of these labs
 
 - Build hands-on experience with Windows Server environments  
-- Understand domain foundations, Group Policy, and network services  
+- Understand domain foundations, Active Directory, Group Policy, and network services  
 - Practice modern device and endpoint management  
 
 
