@@ -188,7 +188,7 @@ This ensures client machines can resolve domain resources correctly.
   https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top
 
 - Microsoft Documentation: Configure DNS for Active Directory  
-  https://learn.microsoft.com/en-us/windows-server/identity/dns/active-directory-integrated-dns-overview
+  https://learn.microsoft.com/en-us/windows-server/networking/dns/dns-overview
 
 ---
 
