@@ -3,18 +3,18 @@
 
 ---
 
-## 📌 Lab Overview
+## Lab Overview
 
 This lab establishes the **foundational identity infrastructure** for a small enterprise Windows environment.
 It focuses on deploying Windows Server 2022, configuring Active Directory Domain Services (AD DS), and preparing the environment for centralized authentication and management.
 
 This lab serves as the **base for all subsequent Windows Server and MD-102 labs**.
 
-> ⚠️ DHCP and advanced DNS configuration are intentionally excluded from this lab and will be implemented in **Lab 2**.
+> ⚠️ DHCP and DNS configuration are intentionally excluded from this lab and will be implemented in **Lab 2**.
 
 ---
 
-## 🎯 Lab Objectives
+## Lab Objectives
 
 - Deploy Windows Server 2022 virtual machines
 - Design and apply a static IP addressing scheme
@@ -25,7 +25,7 @@ This lab serves as the **base for all subsequent Windows Server and MD-102 labs*
 
 ---
 
-## 🏗️ Lab Architecture
+## Lab Architecture
 
 The lab consists of three Windows Server virtual machines:
 
@@ -37,7 +37,7 @@ The lab consists of three Windows Server virtual machines:
 
 ---
 
-## 🌐 Network Design
+## Network Design
 
 ### Network Addressing
 
@@ -62,7 +62,7 @@ The lab consists of three Windows Server virtual machines:
 
 ---
 
-## 🔌 Virtual Switch Configuration
+## Virtual Switch Configuration
 
 - All virtual machines are initially connected to the **Default External Switch**
 - This provides:
@@ -72,9 +72,9 @@ The lab consists of three Windows Server virtual machines:
 
 ---
 
-## 🖥️ Virtual Machine Configuration
+## Virtual Machine Configuration
 
-### 1️⃣ Create Virtual Machines
+### 1. Create Virtual Machines
 
 Create three VMs using the following names:
 
@@ -83,11 +83,12 @@ Create three VMs using the following names:
 - `Win2k22-Core-01`
 
 VM names match OS hostnames to simplify administration and troubleshooting.
+
 ![Hyper-V-Manager-with-3-VMs-running](/windows-server-labs/lab-1-setup-environment/screenshots/Hyper-V-Manager-with-3-VMs-running.jpg)
 
 ---
 
-### 2️⃣ Configure `Win2k22-DC-01`
+### 2. Configure `Win2k22-DC-01`
 
 #### Operating System
 - Install **Windows Server 2022 Datacenter Evaluation**
@@ -109,6 +110,7 @@ Win2k22-DC-01
 - Add a system description identifying it as the **Primary Domain Controller**
 
 - Win2k22-DC-01 renamed and configured with a static IP address.
+
 ![Win2k22-DC-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-DC-01-renamed-and-static-ip-configured.PNG)
 
 - Network configuration verified using ipconfig /all.
@@ -118,7 +120,7 @@ Win2k22-DC-01
 
 ## 🏢 Active Directory Configuration
 
-### 3️⃣ Install Active Directory Domain Services (AD DS)
+### 3. Install Active Directory Domain Services (AD DS)
 
 On `Win2k22-DC-01`:
 
@@ -129,7 +131,7 @@ On `Win2k22-DC-01`:
 
 ---
 
-### 4️⃣ Configure `Win2k22-SRVR-01`
+### 4. Configure `Win2k22-SRVR-01`
 
 - Rename the server to: 
 
@@ -146,6 +148,7 @@ Win2k22-SRVR-01
   - Preferred DNS: `192.168.10.10`
 
 - Win2k22-SRVR-01 renamed and configured with a static IP address
+
 ![Win2k22-SRVR-01-static-ip-config-renamed](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-SRVR-renamed-and-static-ip-configured.PNG)
 
 - Network configuration verified using ipconfig /all.
@@ -153,7 +156,7 @@ Win2k22-SRVR-01
 
 ---
 
-### 5️⃣ Configure `Win2k22-Core-01`
+### 5. Configure `Win2k22-Core-01`
 
 - Rename the server to: 
 
@@ -168,6 +171,7 @@ Win2k22-Core-01
   - Preferred DNS: `192.168.10.10`
 
 - Win2k22-Core-01 renamed and configured with a static IP address
+
 ![Win2k22-Core-01-static-ip-config-renamed-1](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-1.jpg)
 
 ![Win2k22-Core-01-static-ip-config-renamed-2](/windows-server-labs/lab-1-setup-environment/screenshots/Win2k22-Core-01-renamed-and-static-ip-configured-2.jpg)
@@ -188,7 +192,7 @@ This validates:
 
 ---
 
-## 📦 Lab 1 Deliverables
+## Lab 1 Deliverables
 
 - One Active Directory forest and domain (`ine.local`)
 - One Domain Controller
@@ -197,4 +201,4 @@ This validates:
 
 ---
 
-### ➡️ Lab 2: DNS & DHCP Services
+### Lab 2: DNS & DHCP Services
