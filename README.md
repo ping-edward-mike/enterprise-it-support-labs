@@ -45,5 +45,6 @@ Visual references to help understand the lab setup and architecture:
 
 ![Logical-Architecture](diagrams/logical-architecture.png)
 
+---
 
 Note: Lab diagrams were designed using *Lucidchart*, and server, router, internet, and PC (desktop) images were generated with *ChatGPT* for clarity.
