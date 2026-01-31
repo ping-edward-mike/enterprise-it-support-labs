@@ -1,4 +1,4 @@
-# 🧪 Windows Server Lab 1  
+# Windows Server Lab 1  
 ## Domain Foundation (Active Directory)
 
 ---
@@ -118,7 +118,7 @@ Win2k22-DC-01
 
 ---
 
-## 🏢 Active Directory Configuration
+## Active Directory Configuration
 
 ### 3. Install Active Directory Domain Services (AD DS)
 
