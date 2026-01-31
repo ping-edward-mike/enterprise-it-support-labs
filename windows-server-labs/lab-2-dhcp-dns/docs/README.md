@@ -68,7 +68,7 @@ On the Domain Controller:
 5. Run the **Post-Deployment Configuration**
    - Authorise the DHCP server in Active Directory
 
-- [**DHCP role installed on Win2k22-DC-01**](/windows-server-labs/lab-2-dhcp-dns/screenshots/installed-dhcp-on-win2k22-dc-01.PNG)
+- ![DHCP role installed on Win2k22-DC-01](/windows-server-labs/lab-2-dhcp-dns/screenshots/installed-dhcp-on-win2k22-dc-01.PNG)
 
 ---
 
@@ -84,10 +84,10 @@ On the Domain Controller:
    - DNS server (Domain Controller IP)
 5. Activate the scope
 
-- [**DHCP scope**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-scope.PNG)
-- [**DHCP scope range**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-ip-ranges.PNG)
-- [**DHCP exclusion addresses**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-exclusion-ips.PNG)
-- [**DHCP configured done**](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-done.PNG)
+- ![DHCP scope](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-scope.PNG)
+- ![DHCP scope range](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-ip-ranges.PNG)
+- ![DHCP exclusion addresses](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-exclusion-ips.PNG)
+- ![DHCP configured done](/windows-server-labs/lab-2-dhcp-dns/screenshots/dhcp-done.PNG)
 
 ---
 
@@ -126,7 +126,7 @@ This ensured client machines can resolve domain resources correctly.
 - **Operating System:** Windows 11
 - **Network Adapter:** `private switch lab`
 
-- [**Win11-01 VM**](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-VM-created.jpg)
+- ![Win11-01 VM](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-VM-created.jpg)
 
 ---
 
@@ -144,7 +144,7 @@ This ensured client machines can resolve domain resources correctly.
   - DNS server
   - Default gateway (if configured)
 
-- [**Win11-01 VM**](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-dhcp-working.PNG)
+- ![Win11-01 VM](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-dhcp-working.PNG)
 
 ---
 
