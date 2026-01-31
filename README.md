@@ -24,3 +24,20 @@ This repository contains hands-on labs designed to build practical skills in Win
 - Build hands-on experience with Windows Server environments  
 - Understand domain foundations, Group Policy, and network services  
 - Practice modern device and endpoint management  
+
+
+## Lab Diagrams
+
+Visual references to help understand the lab setup and architecture:
+
+**Network Architecture**
+
+![Network-Architecture](diagrams/Network-Architecture.jpg)
+
+**Logical Diagram**
+
+![Network-Architecture](diagrams/logical-architecture.png)
+
+**3 Servers for this labs**
+
+![Network-Architecture](diagrams/servers-with-respective-ips.jpg)
