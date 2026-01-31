@@ -118,6 +118,12 @@ DNS was installed during **Lab 1** as part of Active Directory Domain Services.
    - Required records (A, NS, SOA)
 4. Ensure DNS is listening on the Domain Controller’s static IP address
 
+![Reverse and Forwarders](/windows-server-labs/lab-2-dhcp-dns/screenshots/reverse-and-forwarders-done.PNG)
+
+![DNS Hosts](/windows-server-labs/lab-2-dhcp-dns/screenshots/dns-dashboard.PNG)
+
+![DNS DHCP Dashboard - OKAY!](/windows-server-labs/lab-2-dhcp-dns/screenshots/done-dhcp-dns-ad-all-okay-lab-1-2.PNG)
+
 ---
 
 ### DNS Integration with DHCP
