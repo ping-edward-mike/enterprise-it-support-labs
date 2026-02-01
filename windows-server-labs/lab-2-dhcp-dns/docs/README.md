@@ -19,7 +19,7 @@ By the end of this lab, domain clients will:
 2. Create and activate a DHCP scope.
 3. Verify that DNS supports Active Directory domain name resolution.
 4. Create a Windows 11 client virtual machine (`Win11-01`).
-5. Install Windows 11 and join the client to the `ine.local` domain.
+5. Install Windows 11 and join the client (local user) to the `ine.local` domain.
 6. Test client connectivity and DHCP/DNS functionality.
 
 ---
@@ -155,7 +155,7 @@ This ensures client machines can resolve domain resources correctly.
 3. Join the domain:
    - Domain name: `ine.local`
 4. Restart the machine when prompted
-5. Log in using a domain account created in Active Directory
+5. Log in using a local user account created during windows setup
 6. Set network configuration to **DHCP**
 7. Verify the machine receives:
    - IP address
