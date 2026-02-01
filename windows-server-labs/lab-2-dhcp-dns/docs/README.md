@@ -177,7 +177,6 @@ This ensures client machines can resolve domain resources correctly.
 - Client resolves domain names via DNS
 - Domain login works on `Win11-01`
 - DHCP lease is visible in the DHCP console
-- DNS records are created automatically for the client
 
 ---
 
