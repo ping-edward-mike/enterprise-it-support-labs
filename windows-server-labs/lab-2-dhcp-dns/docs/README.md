@@ -160,7 +160,6 @@ This ensures client machines can resolve domain resources correctly.
 7. Verify the machine receives:
    - IP address
    - DNS server
-   - Default gateway (if configured)
 
 ![Win11-01 DHCP working](/windows-server-labs/lab-2-dhcp-dns/screenshots/Win11-01-dhcp-working.PNG)
 
