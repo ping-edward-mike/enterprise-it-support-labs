@@ -122,7 +122,7 @@ ine.local (domain)
 - The John Doe account was located and re-enabled (Account disabled checkbox unchecked).  
 ![Enable John Doe account](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/find-john-account.PNG)
 
-- John Doe’s password was reset by IT Support (L1).  
+- John Doe’s password was reset by Edward Mike.  
 ![Password reset initiated](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-psswd-reset.PNG)  
 ![Password reset completed](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/passwd-changed-done.PNG)
 
