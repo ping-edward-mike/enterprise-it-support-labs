@@ -101,3 +101,8 @@ ine.local (domain)
 ## Lab Summary / Reflection
 This lab reinforced key Active Directory administration skills, including **OU design, user and group management, delegation of administrative rights**. By completing these tasks, we ensured that IT support staff could perform essential functions without exposing the domain to unnecessary risk, demonstrating best practices in enterprise AD management.
 
+---
+
+### Next Lab
+
+Lab 4: Configure File and Print Services with Permissions and Shares
