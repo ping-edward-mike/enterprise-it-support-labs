@@ -96,6 +96,15 @@ ine.local (domain)
 
 > **Note:** Delegation via groups ensures easier management, scalability, and auditability compared to assigning rights directly to individual users.
 
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Delegate-control-to-it-support-step-1.PNG)
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Delegate-control-to-it-support-step-2.PNG)
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Delegate-control-to-it-support-step-3.PNG)
+
+*Verify Delegation on IT-Support-Lv1*
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1.PNG)
+
+*Verify Delegation on User - Edward Mike*
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1-edward-profile.PNG)
 ---
 
 ## Lab Summary / Reflection
