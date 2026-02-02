@@ -20,7 +20,7 @@ ine.local (domain)
     │ │ └── Security (OU)
     │ └── Users (OU)
     │ ├── IT-Users (OU)
-    │ └── Finance-Users (OU)
+      └── Finance-Users (OU)
 
 ```
 
@@ -28,6 +28,8 @@ ine.local (domain)
 - Users and computers are separated to simplify management and policy application.
 - Groups are stored in a dedicated OU to manage access control efficiently.
 - Departments are represented through OUs and security groups to ensure clear role-based access.
+
+![Created OUS under domain](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/created-OUs-under-domain-ine-local.PNG)
 
 ---
 
@@ -42,6 +44,10 @@ ine.local (domain)
 - `IT-Support-L1` -> Edward Mike
 - `Finance-Users` -> John Doe
 
+![1 User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
+
+![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
+
 ---
 
 ## Lab Tasks
@@ -53,11 +59,13 @@ ine.local (domain)
 1. Created Edward Mike in `Users > IT`.
 2. Created John Doe in `Users > Finance`.
 3. Added each user to their respective security group.
-4. Verified that John Doe could sign in to a domain-joined machine.
+4. Verified that John Doe could sign in to Win11-01.
 
 **Acceptance Criteria:**
 - Users exist in the correct OUs.
 - John Doe is able to log in successfully.
+
+
 
 ---
 
