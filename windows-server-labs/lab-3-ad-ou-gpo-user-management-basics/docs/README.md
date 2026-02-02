@@ -100,11 +100,11 @@ ine.local (domain)
 ![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Delegate-control-to-it-support-step-2.PNG)
 ![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Delegate-control-to-it-support-step-3.PNG)
 
-*Verify Delegation on IT-Support-Lv1*
-![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1.PNG)
+### Verify Delegation
 
-*Verify Delegation on User - Edward Mike*
-![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1-edward-profile.PNG)
+![Verify Delegation-Global-Level](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1.PNG)
+
+![Verifiy Delegation-User-level](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1-edward-profile.PNG)
 ---
 
 ## Lab Summary / Reflection
