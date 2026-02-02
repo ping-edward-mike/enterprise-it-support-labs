@@ -80,25 +80,7 @@ ine.local (domain)
 
 ---
 
-### Task 2 – Delegate Limited Administrative Rights
-**Objective:** Delegated control to allow the IT user to **reset passwords and unlock accounts** without granting full administrative privileges.
-
-**Steps Performed:**  
-1. Added Edward Mike to the `IT-Support-L1` group.  
-2. Delegated control on the `Users` OU to allow:  
-   - Password reset  
-   - Account unlock  
-3. Confirmed that other administrative actions remained restricted.  
-
-**Acceptance Criteria:**  
-- Edward Mike could reset passwords and unlock accounts.  
-- Edward Mike could **not** create users, manage groups, or access Domain Admin privileges.  
-
-> **Note:** Delegation via groups ensures easier management, scalability, and auditability compared to assigning rights directly to individual users.
-
----
-
-### Task 3 – Create a Restricted Finance File
+### Task 2 – Create a Restricted Finance File
 **Objective:** Configured group-based file access so that only Finance users could access sensitive data.
 
 **Steps Performed:**  
@@ -114,6 +96,24 @@ ine.local (domain)
 - Finance users had access.  
 - Other users did not have access.  
 - Permissions were applied via security groups rather than individual users.
+
+---
+
+### Task 3 – Delegate Limited Administrative Rights
+**Objective:** Delegated control to allow the IT user to **reset passwords and unlock accounts** without granting full administrative privileges.
+
+**Steps Performed:**  
+1. Added Edward Mike to the `IT-Support-L1` group.  
+2. Delegated control on the `Users` OU to allow:  
+   - Password reset  
+   - Account unlock  
+3. Confirmed that other administrative actions remained restricted.  
+
+**Acceptance Criteria:**  
+- Edward Mike could reset passwords and unlock accounts.  
+- Edward Mike could **not** create users, manage groups, or access Domain Admin privileges.  
+
+> **Note:** Delegation via groups ensures easier management, scalability, and auditability compared to assigning rights directly to individual users.
 
 ---
 
