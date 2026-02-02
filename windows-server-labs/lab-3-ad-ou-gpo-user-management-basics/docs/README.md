@@ -53,19 +53,18 @@ ine.local (domain)
 
 | Name         | Username      | OU             | Role              |
 |--------------|---------------|----------------|-----------------|
-| Edward Mike  | edd.mike      | Users > IT     | IT Support (L1)  |
-| John Doe     | john.doe      | Users > Finance| Finance Staff    |
+| Edward Mike  | edd.mike      | Users > IT-Users     | IT Support (L1)  |
+| John Doe     | john.doe      | Users > Finance-Users | Finance Staff    |
 
 
 **Steps Performed:**  
-1. Created Edward Mike in `Users > IT`.  
-2. Created John Doe in `Users > Finance`.  
+1. Created Edward Mike in `Users > IT-Users`.  
+2. Created John Doe in `Users > Finance-Users`.  
 3. Added each user to their respective security group.  
-4. Verified that John Doe was able to sign in to `Win11-01`.
 
 **Acceptance Criteria:**  
 - Users exist in the correct OUs.  
-- John Doe successfully signed in to the domain.  
+- John Doe successfully signed in to the domain on Win11-01. 
 
 ![User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
 
