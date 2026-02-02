@@ -1,7 +1,7 @@
 # Lab 3 – Active Directory OU, Users, Groups, and Delegation
 
 ## Overview
-In this lab, we created and managed Active Directory (AD) Organizational Units (OUs), users, and security groups for a small enterprise scenario. The lab also demonstrated delegating administrative rights and setting up group-based file access, simulating real-world Service Desk and IT Support operations.
+In this lab, we **created and managed Active Directory (AD) Organizational Units (OUs), users, and security groups** for a small enterprise scenario. We also **delegated administrative rights** and **configured group-based file access**, simulating real-world Service Desk and IT Support operations.
 
 **Domain:** `ine.local`  
 **Location:** Birmingham  
@@ -24,90 +24,99 @@ ine.local (domain)
 
 ```
 
-**Notes:**
-- Users and computers are separated to simplify management and policy application.
-- Groups are stored in a dedicated OU to manage access control efficiently.
+**Notes:**  
+- Users and computers are separated to simplify management and policy application.  
+- Security groups are stored in a dedicated OU to manage access control efficiently.  
 - Departments are represented through OUs and security groups to ensure clear role-based access.
 
-![Created OUS under domain](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/created-OUs-under-domain-ine-local.PNG)
+![Created OUs under domain](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/created-OUs-under-domain-ine-local.PNG)
 
 ---
 
 ## Users Created
 
-| Name         | Username      | OU                   | Role                     |
-|--------------|---------------|--------------------|-------------------------|
-| Edward Mike  | edd.mike        | Users > IT          | IT Support (L1)         |
-| John Doe     | john.doe         | Users > Finance     | Finance Staff           |
+| Name         | Username      | OU             | Role              |
+|--------------|---------------|----------------|-----------------|
+| Edward Mike  | edd.mike      | Users > IT     | IT Support (L1)  |
+| John Doe     | john.doe      | Users > Finance| Finance Staff    |
 
-**Security Groups:**
-- `IT-Support-L1` -> Edward Mike
-- `Finance-Users` -> John Doe
+**Security Groups:**  
+- `IT-Support-L1` → Edward Mike  
+- `Finance-Users` → John Doe  
 
-![Security Group for IT-Support-Level-1](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
+![Security Group for IT-Support-L1](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
 
-![Security Group for Finance-Users](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-Finance-USers.PNG)
+![Security Group for Finance-Users](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-Finance-USers.PNG)
 
-## USers as Members of Group
-![Edward-in-IT-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
+---
 
-![John-in-Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
+## Users as Members of Groups
+
+![Edward in IT-Support](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
+
+![John in Finance-Security](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
 
 ---
 
 ## Lab Tasks
 
 ### Task 1 – Create Department Users
-**Objective:** Created user accounts for the IT and Finance departments and verify that users can sign in to the domain.
+**Objective:** Created user accounts for the IT and Finance departments and verified that users could sign in to the domain.
 
-**Steps Performed:**
-1. Created Edward Mike in `Users > IT`.
-2. Created John Doe in `Users > Finance`.
-3. Added each user to their respective security group.
-4. Verified that John Doe could sign in to Win11-01.
+**Steps Performed:**  
+1. Created Edward Mike in `Users > IT`.  
+2. Created John Doe in `Users > Finance`.  
+3. Added each user to their respective security group.  
+4. Verified that John Doe was able to sign in to `Win11-01`.
 
-**Acceptance Criteria:**
-- Users exist in the correct OUs.
-- John Doe is able to log in successfully.
+**Acceptance Criteria:**  
+- Users exist in the correct OUs.  
+- John Doe successfully signed in to the domain.  
 
-![1 User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
+![User under IT-Users OU](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
 
-![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
+![User under Finance-Users OU](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
 
-![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
-
+![John signed in successfully to Win11-01](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
 
 ---
 
 ### Task 2 – Delegate Limited Administrative Rights
-**Objective:** Allow the IT user to perform password resets and account unlocks without granting full administrative privileges.
+**Objective:** Delegated control to allow the IT user to **reset passwords and unlock accounts** without granting full administrative privileges.
 
-**Steps Performed:**
-1. Added Edward Mike to the `IT-Support-L1` group.
-2. Delegated control on the `Users` OU to allow:
-   - Password reset
-   - Account unlock
-3. Confirmed that other administrative actions remained restricted.
+**Steps Performed:**  
+1. Added Edward Mike to the `IT-Support-L1` group.  
+2. Delegated control on the `Users` OU to allow:  
+   - Password reset  
+   - Account unlock  
+3. Confirmed that other administrative actions remained restricted.  
 
-**Acceptance Criteria:**
-- Edward Mike can reset passwords and unlock accounts.
-- Edward Mike cannot create users, manage groups, or access Domain Admin privileges.
+**Acceptance Criteria:**  
+- Edward Mike could reset passwords and unlock accounts.  
+- Edward Mike could **not** create users, manage groups, or access Domain Admin privileges.  
+
+> **Note:** Delegation via groups ensures easier management, scalability, and auditability compared to assigning rights directly to individual users.
 
 ---
 
 ### Task 3 – Create a Restricted Finance File
-**Objective:** Set up group-based file access so that only Finance users can access sensitive data.
+**Objective:** Configured group-based file access so that only Finance users could access sensitive data.
 
-**Steps Performed:**
-1. Created a folder named `Finance-Data`.
-2. Assigned NTFS permissions:
-   - `Finance-Users` → Read/Modify
-   - Removed `Everyone` and other unnecessary access.
-3. Verified access:
-   - John Doe could access the folder.
-   - Edward Mike could not access the folder.
+**Steps Performed:**  
+1. Created a folder named `Finance-Data`.  
+2. Assigned NTFS permissions:  
+   - `Finance-Users` → Read/Modify  
+   - Removed `Everyone` and other unnecessary access  
+3. Verified access:  
+   - John Doe could access the folder  
+   - Edward Mike could **not** access the folder  
 
-**Acceptance Criteria:**
-- Finance users have access.
-- Other users do not have access.
-- Permissions are applied through groups, not individual users.
+**Acceptance Criteria:**  
+- Finance users had access.  
+- Other users did not have access.  
+- Permissions were applied via security groups rather than individual users.
+
+---
+
+## Lab Summary / Reflection
+This lab reinforced key Active Directory administration skills, including **OU design, user and group management, delegation of administrative rights, and group-based access control**. By completing these tasks, we ensured that IT support staff could perform essential functions without exposing the domain to unnecessary risk, demonstrating best practices in enterprise AD management.
