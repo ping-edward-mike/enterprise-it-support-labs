@@ -29,7 +29,7 @@ ine.local (domain)
 - Security groups are stored in a dedicated OU to manage access control efficiently.  
 - Departments are represented through OUs and security groups to ensure clear role-based access.
 
-![Created OUs under domain](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/created-OUs-under-domain-ine-local.PNG)
+![Created OUs under domain](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/created-OUs-under-domain-ine-local.PNG)
 
 ---
 
@@ -44,17 +44,17 @@ ine.local (domain)
 - `IT-Support-L1` → Edward Mike  
 - `Finance-Users` → John Doe  
 
-![Security Group for IT-Support-L1](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
+![Security Group for IT-Support-L1](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
 
-![Security Group for Finance-Users](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-Finance-USers.PNG)
+![Security Group for Finance-Users](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-Finance-USers.PNG)
 
 ---
 
 ## Users as Members of Groups
 
-![Edward in IT-Support](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
+![Edward in IT-Support](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
 
-![John in Finance-Security](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
 
 ---
 
@@ -73,11 +73,11 @@ ine.local (domain)
 - Users exist in the correct OUs.  
 - John Doe successfully signed in to the domain.  
 
-![User under IT-Users OU](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
+![User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
 
-![User under Finance-Users OU](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
+![User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
 
-![John signed in successfully to Win11-01](windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
+![John signed in successfully to Win11-01](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
 
 ---
 
