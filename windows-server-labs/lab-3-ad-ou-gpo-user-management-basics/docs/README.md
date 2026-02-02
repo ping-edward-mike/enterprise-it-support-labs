@@ -33,16 +33,12 @@ ine.local (domain)
 
 ---
 
-## Users Created
+## Security Groups
 
-| Name         | Username      | OU             | Role              |
-|--------------|---------------|----------------|-----------------|
-| Edward Mike  | edd.mike      | Users > IT     | IT Support (L1)  |
-| John Doe     | john.doe      | Users > Finance| Finance Staff    |
 
 **Security Groups:**  
-- `IT-Support-L1` → Edward Mike  
-- `Finance-Users` → John Doe  
+- `IT-Support-L1` 
+- `Finance-Users` 
 
 ![Security Group for IT-Support-L1](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
 
@@ -50,18 +46,16 @@ ine.local (domain)
 
 ---
 
-## Users as Members of Groups
-
-![Edward in IT-Support](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
-
-![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
-
----
-
 ## Lab Tasks
 
 ### Task 1 – Create Department Users
 **Objective:** Created user accounts for the IT and Finance departments and verified that users could sign in to the domain.
+
+| Name         | Username      | OU             | Role              |
+|--------------|---------------|----------------|-----------------|
+| Edward Mike  | edd.mike      | Users > IT     | IT Support (L1)  |
+| John Doe     | john.doe      | Users > Finance| Finance Staff    |
+
 
 **Steps Performed:**  
 1. Created Edward Mike in `Users > IT`.  
@@ -78,6 +72,12 @@ ine.local (domain)
 ![User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
 
 ![John signed in successfully to Win11-01](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
+
+## Users as Members of Groups
+
+![Edward in IT-Support](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
+
+![John in Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
 
 ---
 
