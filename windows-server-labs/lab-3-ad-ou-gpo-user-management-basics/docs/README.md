@@ -106,6 +106,8 @@ ine.local (domain)
 
 ![Verifiy Delegation-User-level](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1-edward-profile.PNG)
 
+---
+
 ### Simulated John Doe Account Disable and Password Reset
 
 - The John Doe account was intentionally disabled to simulate a common support scenario.
