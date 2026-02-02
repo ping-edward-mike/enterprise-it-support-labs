@@ -44,16 +44,21 @@ ine.local (domain)
 - `IT-Support-L1` -> Edward Mike
 - `Finance-Users` -> John Doe
 
-![1 User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
+![Security Group for IT-Support-Level-1](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-IT-Support-Lv1.PNG)
 
-![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
+![Security Group for Finance-Users](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Security-Group-Finance-USers.PNG)
+
+## USers as Members of Group
+![Edward-in-IT-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Edward-in-IT-Support-Lv1-Security-Group.PNG)
+
+![John-in-Finance-Security](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-in-Finance-Security-Group.PNG)
 
 ---
 
 ## Lab Tasks
 
 ### Task 1 – Create Department Users
-**Objective:** Create user accounts for the IT and Finance departments and verify that users can sign in to the domain.
+**Objective:** Created user accounts for the IT and Finance departments and verify that users can sign in to the domain.
 
 **Steps Performed:**
 1. Created Edward Mike in `Users > IT`.
@@ -65,6 +70,11 @@ ine.local (domain)
 - Users exist in the correct OUs.
 - John Doe is able to log in successfully.
 
+![1 User under IT-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-1-under-IT.PNG)
+
+![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/create-user-2-under-Finance.PNG)
+
+![1 User under Finance-Users OU](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-signed-in-successsfuly-to-Win11-01.PNG)
 
 
 ---
