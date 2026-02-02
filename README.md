@@ -9,16 +9,14 @@ This repository contains hands-on labs designed to build practical skills in Win
 - [**Lab 1: Domain Foundation and Active Directory Deployment**](/windows-server-labs/lab-1-setup-environment/docs/README.md)
 - [**Lab 2: Configure DHCP and DNS Services for the Domain**](/windows-server-labs/lab-2-dhcp-dns/docs/README.md)  
 - [**Lab 3: Active Directory Organisation: OUs, Users, Groups and Delegation**](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/docs/README.md) 
-- **Lab 4a:** Implement Group Policy Objects (GPOs) for desktop and security settings  
-- **Lab 4b:** Password Policies and Security
-- **Lab 5:** Configure File and Print Services with Permissions and Shares  
-- **Lab 6:** Troubleshoot Common Active Directory and Windows Server Networking Issues  
-- **Lab 7:** Configure Backup and Restore Strategies for the Domain Environment  
-- **Lab 8:** Entra ID Integration and User and Device Management Fundamentals  
-- **Lab 9:** Configure Intune for Endpoint Management and Policy Enforcement  
-- **Lab 10:** Device Enrolment, Compliance Policies and Reporting in Intune  
-- **Lab 11:** Advanced Group Policy and Security Configuration Across Devices  
-- **Lab 12:** Hybrid Identity and Device Management with Windows Server and Intune  
+- **Lab 4:** Configure File and Print Services with Permissions and Shares  
+- **Lab 5:** Troubleshoot Common Active Directory and Windows Server Networking Issues  
+- **Lab 6:** Configure Backup and Restore Strategies for the Domain Environment  
+- **Lab 7:** Entra ID Integration and User and Device Management Fundamentals  
+- **Lab 8:** Configure Intune for Endpoint Management and Policy Enforcement  
+- **Lab 9:** Device Enrolment, Compliance Policies and Reporting in Intune  
+- **Lab 10:** Advanced Group Policy and Security Configuration Across Devices  
+- **Lab 11:** Hybrid Identity and Device Management with Windows Server and Intune  
 
 ## Goals of these labs
 

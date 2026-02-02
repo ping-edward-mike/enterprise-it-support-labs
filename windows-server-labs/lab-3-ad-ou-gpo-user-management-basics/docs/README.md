@@ -1,7 +1,7 @@
 # Lab 3 – Active Directory OU, Users, Groups, and Delegation
 
 ## Overview
-In this lab, we **created and managed Active Directory (AD) Organizational Units (OUs), users, and security groups** for a small enterprise scenario. We also **delegated administrative rights** and **configured group-based file access**, simulating real-world Service Desk and IT Support operations.
+In this lab, we **created and managed Active Directory (AD) Organizational Units (OUs), users, and security groups** for a small enterprise scenario. We also **delegated administrative rights**, simulating real-world Service Desk and IT Support operations.
 
 **Domain:** `ine.local`  
 **Location:** Birmingham  
@@ -80,26 +80,7 @@ ine.local (domain)
 
 ---
 
-### Task 2 – Create a Restricted Finance File
-**Objective:** Configured group-based file access so that only Finance users could access sensitive data.
-
-**Steps Performed:**  
-1. Created a folder named `Finance-Data`.  
-2. Assigned NTFS permissions:  
-   - `Finance-Users` → Read/Modify  
-   - Removed `Everyone` and other unnecessary access  
-3. Verified access:  
-   - John Doe could access the folder  
-   - Edward Mike could **not** access the folder  
-
-**Acceptance Criteria:**  
-- Finance users had access.  
-- Other users did not have access.  
-- Permissions were applied via security groups rather than individual users.
-
----
-
-### Task 3 – Delegate Limited Administrative Rights
+### Task 2 – Basic Delegation Of Administrative Rights
 **Objective:** Delegated control to allow the IT user to **reset passwords and unlock accounts** without granting full administrative privileges.
 
 **Steps Performed:**  
@@ -118,4 +99,5 @@ ine.local (domain)
 ---
 
 ## Lab Summary / Reflection
-This lab reinforced key Active Directory administration skills, including **OU design, user and group management, delegation of administrative rights, and group-based access control**. By completing these tasks, we ensured that IT support staff could perform essential functions without exposing the domain to unnecessary risk, demonstrating best practices in enterprise AD management.
+This lab reinforced key Active Directory administration skills, including **OU design, user and group management, delegation of administrative rights**. By completing these tasks, we ensured that IT support staff could perform essential functions without exposing the domain to unnecessary risk, demonstrating best practices in enterprise AD management.
+
