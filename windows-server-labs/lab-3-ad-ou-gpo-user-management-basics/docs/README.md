@@ -10,7 +10,7 @@ In this lab, we created and managed Active Directory (AD) Organizational Units (
 ---
 
 ## OU Structure
-
+```
 ine.local (domain)
     ├── Birmingham (OU)
     │ ├── Computers (OU)
@@ -22,7 +22,7 @@ ine.local (domain)
     │ ├── IT-Users (OU)
     │ └── Finance-Users (OU)
 
-
+```
 
 **Notes:**
 - Users and computers are separated to simplify management and policy application.
