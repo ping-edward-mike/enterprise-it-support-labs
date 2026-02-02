@@ -105,6 +105,31 @@ ine.local (domain)
 ![Verify Delegation-Global-Level](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1.PNG)
 
 ![Verifiy Delegation-User-level](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/Verify-Reset-password-on-IT-support-lv-1-edward-profile.PNG)
+
+### Simulated John Doe Account Disable and Password Reset
+
+- The John Doe account was intentionally disabled to simulate a common support scenario.
+- Edward Mike, acting as IT Support (L1), logged into the domain controller to re-enable the account and reset the password using delegated permissions.
+
+#### Verification Steps
+
+- John Doe’s login attempt failed due to the disabled account.  
+![Verify delegation – account disabled](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/John-Account-disabled.jpg)
+
+- Edward Mike successfully logged into the domain controller (`Win2k22-DC-01`).  
+![Verify delegation – Edward login to DC](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/edward-login-into-DC.PNG)
+
+- The John Doe account was located and re-enabled (Account disabled checkbox unchecked).  
+![Enable John Doe account](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/find-john-account.PNG)
+
+- John Doe’s password was reset by IT Support (L1).  
+![Password reset initiated](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-psswd-reset.PNG)  
+![Password reset completed](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/passwd-changed-done.PNG)
+
+- John Doe successfully logged in and was prompted to change his password at first logon.  
+![Successful login after reset](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/snippets/john-logginh-in-successful.jpg)
+
+
 ---
 
 ## Lab Summary / Reflection
