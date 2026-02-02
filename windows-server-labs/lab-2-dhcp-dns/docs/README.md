@@ -192,4 +192,4 @@ This ensures client machines can resolve domain resources correctly.
 
 ### Next Lab
 
-[**Lab 3: Active Directory Basics (OUs, Users, Groups, and Group Policy)**](/lab-3-ad-ou-gpo-user-management-basics/docs/README.md) 
+[**Lab 3: Active Directory Basics (OUs, Users, Groups, and Group Policy)**](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/docs/README.md) 
