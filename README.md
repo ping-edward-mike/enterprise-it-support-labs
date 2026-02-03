@@ -9,8 +9,7 @@ This repository contains hands-on labs designed to build practical skills in Win
 - [**Lab 1: Domain Foundation and Active Directory Deployment**](/windows-server-labs/lab-1-setup-environment/docs/README.md)
 - [**Lab 2: Configure DHCP and DNS Services for the Domain**](/windows-server-labs/lab-2-dhcp-dns/docs/README.md)  
 - [**Lab 3: Active Directory Organisation: OUs, Users, Groups and Delegation**](/windows-server-labs/lab-3-ad-ou-gpo-user-management-basics/docs/README.md) 
-- **Lab 4:** Configure File and Print Services with Permissions and Shares  
-- **Lab 5:** Troubleshoot Common Active Directory and Windows Server Networking Issues   
+- **Lab 4:** Configure File and Print Services with Permissions and Shares   
 
 ## Goals of these labs
 
